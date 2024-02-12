@@ -31,6 +31,24 @@ p {
 
 /* #endregion reset */
 
+header {
+    padding: 3em;
+    display: flex;
+    position: fixed;
+    z-index: 2000;
+    width: 100%;
+
+    .logo {
+        fill: white;
+        transition: fill ease .67s;
+    }
+
+    .logo:hover polygon {
+        animation: colorBlink 1s infinite forwards;
+    }
+
+}
+
 main {
 
     overflow: clip;
@@ -43,15 +61,25 @@ main {
         gap: 1em;
     }
 
+    .hat {
+        transition: 1.67s ease;
+    }
+
+    .hat.up {
+        translate: 0 -200%
+    }
+
     .header {
         min-height: 100svh;
         background-image: conic-gradient(from 90deg at 50% 125%, #20b2aa, #135da5, #0d0895, #4b0082, #4b0082, #0d0895, #135da5, #20b2aa);
-        background-size: 110%;
+        background-size: 100%;
         color: white;
+        z-index: -100;
     }
 
     h2 {
         font-size: 3rem;
+        transition: 1.67s ease;
 
         .scroll {
             position: relative;
@@ -81,9 +109,18 @@ main {
         }
     }
 
+    h2.right {
+        translate: 333% 0;
+    }
+
+    p.shrink {
+        scale: 0%
+    }
+
     p {
         width: 67ch;
         font-size: 1.1rem;
+        transition: 2s ease;
     }
 
     .lower {
@@ -92,7 +129,7 @@ main {
 
     .smaller {
         padding-bottom: 3em;
-        min-height: calc(50svh - 3em);
+        min-height: 50svh;
         color: white;
         opacity: 0;
         rotate: -1deg;
@@ -134,3 +171,19 @@ main {
         height: 1000svh;
     }
 }
+
+/* #region @keyframes */
+@keyframes colorBlink {
+    0%, 33.33% {
+        fill: #f55
+    }
+
+    33.34%, 66.66% {
+        fill: #5f5
+    }
+
+    66.67%, 100% {
+        fill: #ff0
+    }
+}
+/* #endregion */
