@@ -1,5 +1,5 @@
 {
-  "name": "scollmagic-learning",
+  "name": "scrollmagic-learning",
   "version": "0.1.0",
   "description": "Learning ScrollMagic",
   "main": "assets/js/main.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/movva-gpu/scrollmagic-learning.git"
+    "url": "git+https://github.com/movva-gpu/ScrollMagic-Learning.git"
   },
   "keywords": [
     "scrollmagic",
@@ -17,7 +17,7 @@
   "author": "Danyella Strikann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/movva-gpu/scrollmagic-learning/issues"
+    "url": "https://github.com/movva-gpu/ScrollMagic-Learning/issues"
   },
-  "homepage": "https://github.com/movva-gpu/scrollmagic-learning#readme"
+  "homepage": "https://github.com/movva-gpu/ScrollMagic-Learning#readme"
 }
