@@ -91,20 +91,25 @@ main {
     }
 
     .smaller {
-        min-height: 50svh;
+        padding-bottom: 3em;
+        min-height: calc(50svh - 3em);
         color: white;
+        opacity: 0;
+        rotate: -1deg;
+        transition: .67s ease-in;
     }
 
     .smaller p {
+        display: flex;
+        gap: 2em;
         background: linear-gradient(to right, #111c, #222c);
         backdrop-filter: blur(18px);
         padding: 2em;
         border-radius: 2em;
     }
 
-    .smaller {
-        opacity: 0;
-        transition: .67s ease-in;
+    .smaller img {
+        border-radius: 1em;
     }
 
     .sec2 {
@@ -118,7 +123,8 @@ main {
     .smaller.slide-in {
         opacity: 1;
         translate: 0 0;
-        transition: 2.33s ease;
+        transition: 3s ease;
+        rotate: 0deg;
     }
 
     .empty {
