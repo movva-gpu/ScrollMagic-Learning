@@ -6,7 +6,7 @@ $(document).ready(() => {
     new ScrollMagic.Scene({
         triggerElement: '.header',
         triggerHook: 0,
-        duration: '100%'
+        duration: '25%'
     })
         .setPin('.header', { pushFollowers: false })
         .addTo(controller);
