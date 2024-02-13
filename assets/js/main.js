@@ -109,7 +109,7 @@ $(document).ready(() => {
     $(window).on('scroll', () => {
         if ($(window).scrollTop() < $('.empty').position().top - $('header').outerHeight()) {$('header svg').css('fill', 'white'); $('span').css('background-color', 'white'); return; }
         $('header svg').css('fill', 'black');
-        $('span').css('background-color', 'black');
+        $('header span').css('background-color', 'black');
     });
 
     $('.logo-sum').on('click', e => {
