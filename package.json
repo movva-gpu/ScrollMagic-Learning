@@ -1,6 +1,6 @@
 {
   "name": "scrollmagic-learning",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Learning ScrollMagic",
   "main": "assets/js/main.js",
   "scripts": {
