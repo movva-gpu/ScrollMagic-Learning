@@ -44,7 +44,7 @@ header {
     }
 
     .logo:hover polygon, li:hover path {
-        animation: colorBlink 1s infinite forwards;
+        animation: colorBlink .8s infinite forwards;
     }
 
     .logo-sum {
@@ -69,6 +69,38 @@ header {
             svg {
                 width: 32px;
                 height: 32px;
+            }
+
+            a:has(span) {
+                display: flex;
+                flex-direction: column;
+                width: 32px;
+                height: 32px;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    background-color: white;
+                    height: .25em;
+                    width: 125%;
+                    border-radius: 100vw;
+                }
+
+                .line2 {
+                    width: 90%;
+                }
+            }
+
+            a:has(span):hover {
+                .line1 {
+                    animation: colorBlinkL1 .8s infinite forwards;
+                }
+                .line2 {
+                    animation: colorBlinkL2 .8s infinite forwards;
+                }
+                .line3 {
+                    animation: colorBlinkL3 .8s infinite forwards;
+                }
             }
         }
     }
@@ -205,6 +237,48 @@ main {
     66.67%, 100% {
         fill: #ff0;
         color: #ff0;
+    }
+}
+
+@keyframes colorBlinkL1 {
+    0%, 33.33% {
+        background-color: #f55
+    }
+
+    33.34%, 66.66% {
+        background-color: #5f5
+    }
+
+    66.67%, 100% {
+        background-color: #ff0;
+    }
+}
+
+@keyframes colorBlinkL2 {
+    0%, 33.33% {
+        background-color: #5f5
+    }
+
+    33.34%, 66.66% {
+        background-color: #ff0
+    }
+
+    66.67%, 100% {
+        background-color: #f55
+    }
+}
+
+@keyframes colorBlinkL3 {
+    0%, 33.33% {
+        background-color: #ff0
+    }
+
+    33.34%, 66.66% {
+        background-color: #f55
+    }
+
+    66.67%, 100% {
+        background-color: #5f5
     }
 }
 /* #endregion */
