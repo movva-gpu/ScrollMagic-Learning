@@ -220,65 +220,75 @@ main {
             z-index: -1;
         }
     }
+
+    .bottom {
+        display: block;
+        height: min-content;
+        text-align: center;
+
+        .why {
+            display: inline-block;
+        }
+    }
 }
 
 /* #region @keyframes */
 @keyframes colorBlink {
     0%, 33.33% {
-        fill: #f55;
-        color: #f55
+        fill: #f88;
+        color: #f88
     }
 
     33.34%, 66.66% {
-        fill: #5f5;
-        color: #5f5
+        fill: #8f8;
+        color: #8f8
     }
 
     66.67%, 100% {
-        fill: #ff0;
-        color: #ff0;
+        fill: #ff8;
+        color: #ff8;
     }
 }
 
 @keyframes colorBlinkL1 {
     0%, 33.33% {
-        background-color: #f55
+        background-color: #f88
     }
 
     33.34%, 66.66% {
-        background-color: #5f5
+        background-color: #8f8
     }
 
     66.67%, 100% {
-        background-color: #ff0;
+        background-color: #ff8;
     }
 }
 
 @keyframes colorBlinkL2 {
     0%, 33.33% {
-        background-color: #5f5
+        background-color: #8f8
     }
 
     33.34%, 66.66% {
-        background-color: #ff0
+        background-color: #ff8
     }
 
     66.67%, 100% {
-        background-color: #f55
+        background-color: #f88
     }
 }
 
 @keyframes colorBlinkL3 {
     0%, 33.33% {
-        background-color: #ff0
+        background-color: #ff8
     }
 
     33.34%, 66.66% {
-        background-color: #f55
+        background-color: #f88
     }
 
     66.67%, 100% {
-        background-color: #5f5
+        background-color: #8f8
     }
 }
 /* #endregion */

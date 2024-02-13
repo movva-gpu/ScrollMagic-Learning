@@ -44,6 +44,20 @@ $(document).ready(() => {
 
     // #endregion
 
+    // #region Why Timeline
+
+    var why = new TimelineMax()
+    .from('.why', 1, {
+        y: -800,
+        x: -1 * $('.why').position().left + $(window).width() / 2,
+        scale: '20',
+        filter: 'hue-rotate(720deg)',
+        color: 'red',
+        ease: 'expo.inOut'
+    });
+
+    // #endregion
+
     // #region Header
 
     new ScrollMagic.Scene({
@@ -74,12 +88,23 @@ $(document).ready(() => {
         .setTween(sectionsTimeline)
         .addTo(controller);
 
+    // #endregion
+
     new ScrollMagic.Scene({
         triggerElement: '.parallax',
         triggerHook: 1,
         duration: $('.parallax').height() + $(window).height()
     })
         .setTween(TweenMax.from('.parallax img', 1, { y:'-50%', ease: 'none' }))
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: '.bottom',
+        triggerHook: 1,
+        duration: $('.bottom').height() + 300,
+        offset: -200
+    })
+        .setTween(why)
         .addTo(controller);
 
     $(window).on('scroll', () => {
