@@ -100,7 +100,7 @@ $(document).ready(() => {
     new ScrollMagic.Scene({
         triggerElement: '.bottom',
         triggerHook: 1,
-        duration: $('.bottom').height() + 7600,
+        duration: $('.bottom').height() + 7500,
         offset: -7500
     })
         .setTween(why)

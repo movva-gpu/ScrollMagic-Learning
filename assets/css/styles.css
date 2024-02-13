@@ -237,6 +237,10 @@ main {
     }
 }
 
+footer {
+    text-align: center;
+}
+
 /* #region @keyframes */
 @keyframes colorBlink {
     0%, 33.33% {
