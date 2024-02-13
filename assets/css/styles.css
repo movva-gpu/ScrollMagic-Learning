@@ -62,11 +62,24 @@ main {
     }
 
     .hat {
-        transition: 1.67s ease;
+        transition: 1.67s ease-out;
     }
 
     .hat.up {
-        translate: 0 -200%
+        translate: 0 -200%;
+        transition: .67s ease-in;
+    }
+
+    .duck {
+        z-index: -1;
+        transition: 1.33s cubic-bezier(.25,.1,.25,1.69)
+    }
+
+    .duck.bewm {
+        rotate: 7200deg;
+        scale: 500%;
+        transition: 4s ease-out;
+        translate: 0 -800% !important;
     }
 
     .header {
@@ -77,9 +90,13 @@ main {
         z-index: -100;
     }
 
+    .header :not(.hat) {
+        translate: 0 -128px;
+    }
+
     h2 {
         font-size: 3rem;
-        transition: 1.67s ease;
+        transition: 1.67s ease-out;
 
         .scroll {
             position: relative;
@@ -110,17 +127,19 @@ main {
     }
 
     h2.right {
-        translate: 333% 0;
+        translate: 333% 0 !important;
+        transition: 1s ease-in;
     }
 
     p.shrink {
-        scale: 0%
+        scale: 0%;
+        transition: 1.33ss ease-in;
     }
 
     p {
         width: 67ch;
         font-size: 1.1rem;
-        transition: 2s ease;
+        transition: 1.67s ease-out;
     }
 
     .lower {
@@ -169,6 +188,27 @@ main {
         text-align: center;
         padding-top: 2em;
         height: 1000svh;
+    }
+
+    .parallax {
+        overflow: clip;
+        position: relative;
+        height: 800px;
+
+        .text {
+            position: absolute;
+            color: white;
+            background: linear-gradient(to right, #111c, #222c);
+            backdrop-filter: blur(5px) invert(100%);
+            padding: 2em;
+            border-radius: 2em;
+        }
+
+        img {
+            scale: 200%;
+            height: 100%;
+            z-index: -1;
+        }
     }
 }
 
