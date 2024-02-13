@@ -84,6 +84,7 @@ header {
                     height: .25em;
                     width: 125%;
                     border-radius: 100vw;
+                    transition: ease .67s;
                 }
 
                 .line2 {
