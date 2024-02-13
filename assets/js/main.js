@@ -34,13 +34,13 @@ $(document).ready(() => {
 
     var sectionsTimeline = new TimelineMax()
         .from('.sec2', 1, {
-            x: 1000,
-            ease: 'circle.out'
-        }, 0)
+            x: $(window).width(),
+            ease: 'circ.out'
+        }, .5)
         .from('.sec3', 1, {
-            x: -1000,
-            ease: 'circle.out'
-        }, .5);
+            x: -1 * $(window).width(),
+            ease: 'circ.out'
+        }, 1.5);
 
     // #endregion
 
