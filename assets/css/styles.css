@@ -230,6 +230,10 @@ main {
             display: inline-block;
         }
     }
+
+    .spacer {
+        height: 10em;
+    }
 }
 
 /* #region @keyframes */

@@ -48,14 +48,13 @@ $(document).ready(() => {
 
     var why = new TimelineMax()
     .from('.why', 1, {
-        y: -800,
+        y: -8000,
         x: -1 * $('.why').position().left + $(window).width() / 2,
         scale: '20',
-        filter: 'hue-rotate(720deg)',
+        filter: 'hue-rotate(3600deg)',
         color: 'red',
-        ease: 'expo.inOut'
+        ease: 'none'
     });
-
     // #endregion
 
     // #region Header
@@ -101,8 +100,8 @@ $(document).ready(() => {
     new ScrollMagic.Scene({
         triggerElement: '.bottom',
         triggerHook: 1,
-        duration: $('.bottom').height() + 300,
-        offset: -200
+        duration: $('.bottom').height() + 7600,
+        offset: -7500
     })
         .setTween(why)
         .addTo(controller);
