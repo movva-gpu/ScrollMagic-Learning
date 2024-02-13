@@ -38,15 +38,40 @@ header {
     z-index: 2000;
     width: 100%;
 
-    .logo {
+    svg {
         fill: white;
         transition: fill ease .67s;
     }
 
-    .logo:hover polygon {
+    .logo:hover polygon, li:hover path {
         animation: colorBlink 1s infinite forwards;
     }
 
+    .logo-sum {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 2em;
+
+        li {
+            margin: auto;
+            width: fit-content;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
 }
 
 main {
@@ -61,25 +86,8 @@ main {
         gap: 1em;
     }
 
-    .hat {
-        transition: 1.67s ease-out;
-    }
-
-    .hat.up {
-        translate: 0 -200%;
-        transition: .67s ease-in;
-    }
-
     .duck {
         z-index: -1;
-        transition: 1.33s cubic-bezier(.25,.1,.25,1.69)
-    }
-
-    .duck.bewm {
-        rotate: 7200deg;
-        scale: 500%;
-        transition: 4s ease-out;
-        translate: 0 -800% !important;
     }
 
     .header {
@@ -96,7 +104,6 @@ main {
 
     h2 {
         font-size: 3rem;
-        transition: 1.67s ease-out;
 
         .scroll {
             position: relative;
@@ -126,20 +133,9 @@ main {
         }
     }
 
-    h2.right {
-        translate: 333% 0 !important;
-        transition: 1s ease-in;
-    }
-
-    p.shrink {
-        scale: 0%;
-        transition: 1.33ss ease-in;
-    }
-
     p {
         width: 67ch;
         font-size: 1.1rem;
-        transition: 1.67s ease-out;
     }
 
     .lower {
@@ -150,9 +146,6 @@ main {
         padding-bottom: 3em;
         min-height: 50svh;
         color: white;
-        opacity: 0;
-        rotate: -1deg;
-        transition: .67s ease-in;
     }
 
     .smaller p {
@@ -166,21 +159,6 @@ main {
 
     .smaller img {
         border-radius: 1em;
-    }
-
-    .sec2 {
-        translate: 100% 0;
-    }
-
-    .sec3 {
-        translate: -100% 0;
-    }
-
-    .smaller.slide-in {
-        opacity: 1;
-        translate: 0 0;
-        transition: 3s ease;
-        rotate: 0deg;
     }
 
     .empty {
@@ -215,15 +193,18 @@ main {
 /* #region @keyframes */
 @keyframes colorBlink {
     0%, 33.33% {
-        fill: #f55
+        fill: #f55;
+        color: #f55
     }
 
     33.34%, 66.66% {
-        fill: #5f5
+        fill: #5f5;
+        color: #5f5
     }
 
     66.67%, 100% {
-        fill: #ff0
+        fill: #ff0;
+        color: #ff0;
     }
 }
 /* #endregion */
